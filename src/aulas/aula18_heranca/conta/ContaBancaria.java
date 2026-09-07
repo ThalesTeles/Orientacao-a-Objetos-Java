@@ -1,49 +1,49 @@
 package aulas.aula18_heranca.conta;
 
 public class ContaBancaria {
+
+    // Atributos privados
     private float saldo;
-    private String tipo;
+    private String titular;
+    private int numero;
 
-    public ContaBancaria(String tipo, float saldo){
-        this.saldo = saldo;
-        this.tipo = tipo;
+    // Construtor principal
+    public ContaBancaria(String titular, int numero, float saldoInicial) {
+        this.titular = titular;
+        this.numero = numero;
+        this.saldo = saldoInicial;
     }
 
-    public ContaBancaria(){}
-
-
-
-    public void sacar(float valor) {
-        if (saldo >= valor){
-            saldo -= valor;
-            System.out.println("O saque realizado foi de: " + valor);
-            System.out.println("Saldo atual:" + this.saldo);
-        }
-        else
-            System.out.println("O valor é maior que o saldo atual");
-    }
-
-    public float depositar(float valor){
-        if (valor >= 0){
-            this.saldo += valor;
-
-        } else
-            System.out.println("O valor inválido para o deposito");
+    // Getters para permitir leitura segura do estado por outras classes (inclusive filhas)
+    public float getSaldo() {
         return this.saldo;
     }
 
-    static void main(){
-        System.out.println("====== CONTA CORRENTE ======");
-        ContaBancaria conta = new ContaBancaria("Corrente", 100);
-        conta.sacar(100);
-        System.out.println("O valor depositado foi de: " + conta.depositar(10));
+    public String getTitular() {
+        return this.titular;
+    }
 
-        System.out.println("====== CONTA ESPECIAL (1======");
-        ContaBancaria contaEspecial = new ContaBancaria("Especial", 1000);
-        contaEspecial.sacar(500);
+    public int getNumero() {
+        return numero;
+    }
 
-        conta.saldo = -199999;
-        System.out.println("Saldo atual de conta: " + conta.saldo);
+    // Setters para permitir a modificação segura do estado de saldo por outras classes (inclusive filhas)
+    public void sacar(float valor) {
+        if (valor > 0 && this.saldo >= valor) {
+            this.saldo -= valor;
+            System.out.println("Saque de R$" + valor + " realizado com sucesso.");
+            System.out.println("Saldo atual: R$" + this.saldo);
+        } else {
+            System.out.println("Operação negada: Saldo insuficiente ou valor inválido.");
+        }
+    }
 
+    public void depositar(float valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+            System.out.println("Depósito de R$" + valor + " realizado.");
+        } else {
+            System.out.println("Operação negada: Valor de depósito inválido.");
+        }
     }
 }
