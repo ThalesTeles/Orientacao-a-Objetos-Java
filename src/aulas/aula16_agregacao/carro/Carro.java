@@ -1,19 +1,32 @@
 package aulas.aula16_agregacao.carro;
 
-public class Carro{
-    public int portas;
-    public int velocidade;
-    public Motor motor;
+public class Carro {
 
-    public Carro(int portasDoConstrutor){
+    private String modelo;
+    private int velocidadeAtual;
+    
+    // Relação de Agregação/Composição: O carro "TEM UM" motor
+    private Motor motor;
 
+    // Ao construir o carro, injetamos o motor nele
+    public Carro(String modelo, Motor motor) {
+        this.modelo = modelo;
+        this.motor = motor;
+        this.velocidadeAtual = 0;
     }
 
-    public void girar_chave(){
-        motor.dar_partida();
+    public void ligarCarro() {
+        System.out.println("Tentando ligar o " + this.modelo + "...");
+        // Comunicação entre objetos (Delegação de responsabilidade)
+        this.motor.darPartida();
     }
 
-    public void acelerar(int valor) {
-        velocidade += valor;
+    public void acelerar(int incremento) {
+        if (this.motor.isLigado()) {
+            this.velocidadeAtual += incremento;
+            System.out.println(this.modelo + " acelerou. Velocidade atual: " + this.velocidadeAtual + " km/h");
+        } else {
+            System.out.println("Você precisa ligar o motor antes de acelerar!");
+        }
     }
 }
