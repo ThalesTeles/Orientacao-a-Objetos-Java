@@ -2,6 +2,7 @@ package aulas.aula02_arrays;
 
 import java.util.Scanner;
 
+@SuppressWarnings("unused")
 public class Aula2 {
 
     // ESCOPO DE VARIÁVEIS (ESCOPO DE CLASSE)
@@ -82,6 +83,7 @@ public class Aula2 {
         int resultadoFatorial = calcularFatorial(numeroParaFatorial);
         System.out.println("O fatorial de " + numeroParaFatorial + "! é: " + resultadoFatorial);
 
+        sc.close();
     }
 
     // IMPLEMENTAÇÃO DAS FUNÇÕES(Métodos)

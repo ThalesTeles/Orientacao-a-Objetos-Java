@@ -4,6 +4,16 @@ import java.util.Scanner;
 
 public class Aula1 {
 
+    /*
+    * O QUE É O @SuppressWarnings("unused")?
+    * O compilador do Java é extremamente rigoroso e gera alertas (warnings) para
+    * códigos "mortos" ou variáveis declaradas que nunca são utilizadas, o que em
+    * um sistema real geralmente indica um erro estrutural.
+    * Como este é um código puramente pedagógico onde declaramos variáveis apenas
+    * para demonstrar a sintaxe, usamos esta anotação para dizer ao compilador
+    * ignorar estes erros de variáveis nunca utilizadas"
+    */
+    @SuppressWarnings("unused")
     static void main(String[] args) {
         System.out.println("Olá Mundo");
 
@@ -113,5 +123,16 @@ public class Aula1 {
         for (String f : dias) {
             System.out.println("Hoje é " + f);
         }
+
+
+        /*
+        * POR QUE FECHAR O SCANNER? (scanner.close())
+        * No Java, o Garbage Collector (Coletor de Lixo) limpa a memória automaticamente,
+        * mas ele NÃO gerencia recursos externos do Sistema Operacional, como conexões de rede,
+        * arquivos abertos ou canais de entrada de dados (como o System.in usado pelo Scanner).
+        * Se não fecharmos o Scanner explicitamente, criamos um "resource leak" (vazamento de recursos),
+        * mantendo o canal do SO preso desnecessariamente após o uso.
+        */
+        scanner.close();
     }
 }
