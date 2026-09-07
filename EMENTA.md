@@ -43,7 +43,8 @@
 #### Módulo 7: Engenharia e Qualidade de Software (Pendente)
 
 * Noções de UML: Diagramação estrutural básica para planejamento de sistemas.
-* Testes de Unidade: Validação automatizada de comportamento das classes.
+* Gerenciamento de Dependências: Introdução simplificada ao Maven (criação do `pom.xml`) focada exclusivamente na importação de bibliotecas externas.
+* Testes de Unidade: Configuração do framework JUnit via Maven e validação automatizada do comportamento das classes.
 
 #### Módulo 8: Projeto Prático Aplicado (Pendente)
 

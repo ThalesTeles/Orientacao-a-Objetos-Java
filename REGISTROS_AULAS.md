@@ -96,9 +96,9 @@
 * Data: 21/10/2026
 * Conteúdo: Introdução à diagramação estrutural. Mapeamento visual das classes, atributos e relacionamentos para o planejamento arquitetural de sistemas.
 
-## TC44E - Aula 24 - Engenharia e Qualidade: Testes de Unidade
+## TC44E - Aula 24 - Engenharia e Qualidade: Maven e Testes de Unidade
 * Data: 28/10/2026
-* Conteúdo: Garantia de qualidade através da validação automatizada. Construção de rotinas de teste para assegurar o comportamento isolado dos métodos e classes.
+* Conteúdo: Introdução simplificada ao Apache Maven focada na criação do `pom.xml` para gerenciamento de dependências externas. Importação do framework JUnit e construção de rotinas de teste para validação automatizada do comportamento das classes.
 
 ## TC44E - Aula 25 - Projeto Prático: Apresentação e Escolha de Requisitos
 * Data: 04/11/2026
