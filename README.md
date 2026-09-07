@@ -8,8 +8,8 @@ Embora o curso esteja registrado institucionalmente como "Estrutura de Dados", o
 
 Para acompanhamento do progresso, cronograma e diretrizes teóricas, consulte os documentos oficiais do repositório:
 
-* **[Ementa](https://www.google.com/search?q=./EMENTA.md):** Contém a divisão em módulos, desde os fundamentos da JVM até a construção do projeto final.
-* **[Registros de Aulas](https://www.google.com/search?q=./REGISTROS_AULAS.md):** Histórico detalhado de tudo o que foi abordado em cada encontro presencial
+* **[Ementa](/EMENTA.md):** Contém a divisão em módulos, desde os fundamentos da JVM até a construção do projeto final.
+* **[Registros de Aulas](/REGISTROS_AULAS.md):** Histórico detalhado de tudo o que foi abordado em cada encontro presencial
 
 ## Estrutura do Repositório
 

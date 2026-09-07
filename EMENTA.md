@@ -1,7 +1,7 @@
 
 ### Ementa - Orientação a Objetos com Java
 
-#### Módulo 1: Fundamentos da JVM e Gerenciamento de Memória
+#### Módulo 1: Fundamentos da JVM e Gerenciamento de Memória (Concluído)
 
 * Diferença conceitual entre interpretação (estilo Python) e o modelo híbrido do Java (Compilador `javac` gerando Bytecode `.class` para a JVM).
 * Sintaxe básica, controle de fluxo e tipagem estática.
