@@ -4,12 +4,12 @@ Este repositório armazena os códigos-fonte, exemplos práticos e exercícios d
 
 Embora o curso esteja registrado institucionalmente como "Estrutura de Dados", o currículo foi integralmente adaptado para focar na transição de paradigma e no aprofundamento em Programação Orientada a Objetos (POO) utilizando a linguagem Java. As aulas possuem duração de 1h30 e ocorrem semanalmente às quartas-feiras.
 
-## 📌 Documentação do Curso
+## Documentação do Curso
 
 Para acompanhamento do progresso, cronograma e diretrizes teóricas, consulte os documentos oficiais do repositório:
 
-* 📖 **[Ementa](https://www.google.com/search?q=./EMENTA.md):** Contém a divisão em módulos, desde os fundamentos da JVM até a construção do projeto final.
-* 📅 **[Registros de Aulas](https://www.google.com/search?q=./REGISTROS_AULAS.md):** Histórico detalhado de tudo o que foi abordado em cada encontro presencial
+* **[Ementa](https://www.google.com/search?q=./EMENTA.md):** Contém a divisão em módulos, desde os fundamentos da JVM até a construção do projeto final.
+* **[Registros de Aulas](https://www.google.com/search?q=./REGISTROS_AULAS.md):** Histórico detalhado de tudo o que foi abordado em cada encontro presencial
 
 ## Estrutura do Repositório
 
