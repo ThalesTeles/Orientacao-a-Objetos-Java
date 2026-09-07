@@ -1,4 +1,4 @@
-package exemplos.personagem;
+package aulas.aula07_classes.personagem;
 
 public class Personagem {
     String nome;
@@ -22,5 +22,3 @@ public class Personagem {
         }
     }
 }
-
-

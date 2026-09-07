@@ -1,4 +1,4 @@
-package aulas;
+package aulas.aula02_arrays;
 
 import java.util.Scanner;
 

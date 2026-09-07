@@ -1,4 +1,4 @@
-package exemplos.carro;
+package aulas.aula16_agregacao.carro;
 
 public class Motor {
     public String tipo;

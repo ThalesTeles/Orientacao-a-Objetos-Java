@@ -1,4 +1,4 @@
-package aulas;
+package aulas.aula01_sintaxe;
 
 import java.util.Scanner;
 

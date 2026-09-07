@@ -1,4 +1,4 @@
-package exemplos.conta;
+package aulas.aula18_heranca.conta;
 
 public class ContaBancaria {
     private float saldo;
@@ -11,7 +11,7 @@ public class ContaBancaria {
 
     public ContaBancaria(){}
 
-    
+
 
     public void sacar(float valor) {
         if (saldo >= valor){
