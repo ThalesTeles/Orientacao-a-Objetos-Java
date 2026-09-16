@@ -1,4 +1,9 @@
 *.class
 .idea
 *.iml
-*.pdf
+*.pdf*roteiro*.md
+*ROTEIRO*.md
+*.xml
+*roteiro*.md
+*ROTEIRO*.md
+*.xml
