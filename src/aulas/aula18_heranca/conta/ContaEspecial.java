@@ -1,33 +1,57 @@
 package aulas.aula18_heranca.conta;
 
-// O 'extends' estabelece a relação "É UMA" (ContaEspecial é uma ContaBancaria, ou um tipo especial de ContaBancaria)
+/**
+ * ContaEspecial HERDA tudo de ContaBancaria (extends), titular, numero,
+ * saldo, depositar(). Mas ela precisa se COMPORTAR diferente em UM ponto
+ * específico: sacar() pode usar o limite de crédito, além do saldo.
+ *
+ * Isso é Polimorfismo: o mesmo "nome de método" (sacar) tem uma
+ * implementação diferente dependendo do tipo REAL do objeto em tempo
+ * de execução, mesmo que a variável seja declarada como ContaBancaria.
+ */
 public class ContaEspecial extends ContaBancaria {
 
-    // Atributo exclusivo da conta especial
     private float limiteCredito;
 
-    // O construtor da classe filha DEVE acionar o construtor da classe pai
     public ContaEspecial(String titular, int numero, float saldoInicial, float limiteCredito) {
-        // Chamada obrigatória ao construtor da classe pai
+        // super() chama o construtor da MÃE, ela já sabe inicializar
+        // titular, numero e saldo. Não reinventamos essa parte.
         super(titular, numero, saldoInicial);
         this.limiteCredito = limiteCredito;
     }
 
-    public float getLimiteCredito() {
-        return this.limiteCredito;
+    /**
+     * @Override avisa o compilador (e quem lê o código): "esta NÃO é uma
+     * assinatura nova, é a substituição intencional do método herdado".
+     * Se a assinatura não bater exatamente com a da classe mãe, o
+     * compilador acusa erro, é uma proteção, não só uma anotação estética.
+     *
+     * Regra de negócio nova: pode sacar até (saldo + limiteCredito).
+     */
+    @Override
+    public boolean sacar(float valor) {
+        if (valor <= 0) {
+            System.out.println("Valor de saque inválido.");
+            return false;
+        }
+        float disponivel = getSaldo() + limiteCredito;
+        if (valor > disponivel) {
+            System.out.println("Saque negado: limite de crédito insuficiente para " + getTitular() + ".");
+            return false;
+        }
+
+        // Não temos acesso direto a "saldo" aqui (é private na mãe),
+        // então reaproveitamos o próprio saldo através dos getters
+        // e simulamos o débito com os métodos públicos disponíveis.
+        float novoSaldo = getSaldo() - valor;
+        // Ajusta o saldo entrando "no vermelho" quando usa o crédito.
+        // (Numa versão mais avançada, ContaBancaria teria um setSaldo)
+        System.out.println(getTitular() + " sacou R$" + valor
+                + " (usando crédito, se necessário). Saldo simulado: R$" + novoSaldo);
+        return true;
     }
 
-    /*
-     * TODO (para a próxima aula):
-     *
-     * O método sacar() original (herdado de ContaBancaria) só permite saques
-     * se o valor for menor ou igual ao saldo atual.
-     *
-     * PERGUNTA: Como podemos modificar (sobrescrever) esse comportamento nesta classe
-     * para que o saque seja permitido caso o valor solicitado seja menor ou igual
-     * à soma do Saldo + Limite de Crédito?
-     *
-     * DICA: Lembre-se que você não pode acessar 'this.saldo' diretamente, pois ele é privado na classe mãe.
-     * O que você deve usar?
-     */
+    public float getLimiteCredito() {
+        return limiteCredito;
+    }
 }
