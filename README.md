@@ -9,21 +9,38 @@ Embora o curso esteja registrado institucionalmente como "Estrutura de Dados", o
 Para acompanhamento do progresso, cronograma e diretrizes teóricas, consulte os documentos oficiais do repositório:
 
 * **[Ementa](/EMENTA.md):** Contém a divisão em módulos, desde os fundamentos da JVM até a construção do projeto final.
-* **[Registros de Aulas](/REGISTROS_AULAS.md):** Histórico detalhado de tudo o que foi abordado em cada encontro presencial
+* **[Registros de Aulas](/REGISTROS_AULAS.md):** Histórico de cada encontro e cronograma replanejado das próximas aulas.
 
 ## Estrutura do Repositório
 
-O projeto é um diretório Java não gerenciado (sem Maven/Gradle), focado na compreensão pura da linguagem. O código está organizado cronologicamente dentro do diretório `src/aulas/` para facilitar a revisão dos conceitos:
+O projeto é um diretório Java não gerenciado (sem Maven/Gradle), focado na compreensão pura da linguagem. O código está organizado **por módulo e conteúdo** dentro de `src/`, seguindo a [Ementa](/EMENTA.md). Cada pasta de módulo é também um pacote Java:
 
-* **Fundamentos e Memória:** Transição de paradigma, compilação na JVM, declaração de arrays e a diferença entre tipos primitivos e tipos de referência.
+```
+src/
+├── modulo1_fundamentos/
+│   ├── sintaxe/              SintaxeBasica: tipos, Scanner, if/switch, laços
+│   └── arrays_e_metodos/     EscopoArraysMetodos: escopo, arrays, métodos, recursão
+├── modulo2_encapsulamento/
+│   └── personagem/           Personagem: construtor, this, private, getters/setters
+├── modulo3_relacionamentos/
+│   └── agregacao/            Carro "tem um" Motor: agregação e delegação
+└── modulo4_heranca_polimorfismo/
+    ├── heranca/              AppHeranca, AppPolimorfismo
+    │   └── conta/            ContaBancaria, ContaEspecial (extends, super, @Override)
+    └── estatico/             ContaBancaria e AppStatic: atributos e métodos static
+```
 
-* **Modelagem de Estado:** Criação de classes, instanciação de objetos, construtores (padrão e sobrecarregados) e escopo de variáveis.
+Os módulos seguintes entram com as próximas aulas: `modulo5_abstracao/`, `modulo6_dados_excecoes_io/` e `modulo7_testes/`.
 
-* **Encapsulamento e Segurança:** Utilização dos modificadores `public`, `private` e `protected`, e o uso da palavra-chave `this` para autorreferência.
-
-* **Relacionamentos Estruturais:** Organização do projeto em pacotes (`packages`) e a comunicação entre objetos via Agregação e Composição (relação "todo-parte").
-
-* **Herança e Polimorfismo:** Hierarquia de classes, especialização de tipos (relação "é-um") e a invocação de rotinas da superclasse através da função `super()`.
+| Módulo | Pasta | Aulas |
+|--------|-------|-------|
+| 1. Fundamentos da JVM e Memória | `modulo1_fundamentos/` | 2, 3, 11, 13 |
+| 2. Estado e Encapsulamento | `modulo2_encapsulamento/` | 5, 7, 8, 11, 13 |
+| 3. Relacionamentos e Modularidade | `modulo3_relacionamentos/` | 8, 9, 14 |
+| 4. Herança e Polimorfismo | `modulo4_heranca_polimorfismo/` | 16, 18–21 |
+| 5. Contratos e Abstração | `modulo5_abstracao/` | 22–23 |
+| 6. Dados, Exceções e Persistência | `modulo6_dados_excecoes_io/` | 24–27 |
+| 7. Engenharia e Qualidade | `modulo7_testes/` | 28–29 |
 
 ## Objetivo Final
 
