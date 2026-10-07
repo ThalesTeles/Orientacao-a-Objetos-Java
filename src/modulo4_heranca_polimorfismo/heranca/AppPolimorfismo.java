@@ -1,6 +1,9 @@
-package aulas.aula18_heranca.conta;
+package modulo4_heranca_polimorfismo.heranca;
 
-public class Main {
+import modulo4_heranca_polimorfismo.heranca.conta.ContaBancaria;
+import modulo4_heranca_polimorfismo.heranca.conta.ContaEspecial;
+
+public class AppPolimorfismo {
     public static void main(String[] args) {
 
         // Repare: a VARIÁVEL é do tipo ContaBancaria (tipo da referência),

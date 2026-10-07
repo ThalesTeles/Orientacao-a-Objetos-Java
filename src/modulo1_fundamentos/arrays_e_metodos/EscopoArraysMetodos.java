@@ -1,9 +1,9 @@
-package aulas.aula02_arrays;
+package modulo1_fundamentos.arrays_e_metodos;
 
 import java.util.Scanner;
 
 @SuppressWarnings("unused")
-public class Aula2 {
+public class EscopoArraysMetodos {
 
     // ESCOPO DE VARIÁVEIS (ESCOPO DE CLASSE)
     //  Variáveis declaradas no escopo da classe (fora de qualquer método).

@@ -1,4 +1,4 @@
-package aulas.aula18_heranca.conta;
+package modulo4_heranca_polimorfismo.heranca.conta;
 
 /**
  * Classe base do domínio bancário.

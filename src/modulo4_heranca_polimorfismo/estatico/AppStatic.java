@@ -1,6 +1,6 @@
-package aulas.aula19_static.conta;
+package modulo4_heranca_polimorfismo.estatico;
 
-public class Main {
+public class AppStatic {
     public static void main(String[] args) {
 
         System.out.println("Banco: " + ContaBancaria.getNomeDoBanco());

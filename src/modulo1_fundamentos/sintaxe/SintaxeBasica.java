@@ -1,8 +1,8 @@
-package aulas.aula01_sintaxe;
+package modulo1_fundamentos.sintaxe;
 
 import java.util.Scanner;
 
-public class Aula1 {
+public class SintaxeBasica {
 
     /*
     * O QUE É O @SuppressWarnings("unused")?

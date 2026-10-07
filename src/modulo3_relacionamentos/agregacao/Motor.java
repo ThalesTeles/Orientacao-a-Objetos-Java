@@ -1,4 +1,4 @@
-package aulas.aula16_agregacao.carro;
+package modulo3_relacionamentos.agregacao;
 
 @SuppressWarnings("unused")
 public class Motor {

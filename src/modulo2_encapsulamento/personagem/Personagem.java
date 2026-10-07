@@ -1,4 +1,4 @@
-package aulas.aula07_classes.personagem;
+package modulo2_encapsulamento.personagem;
 
 public class Personagem {
     String nome;

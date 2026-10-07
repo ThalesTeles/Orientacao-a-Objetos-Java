@@ -1,7 +1,7 @@
-package aulas.aula18_heranca;
+package modulo4_heranca_polimorfismo.heranca;
 
-import aulas.aula18_heranca.conta.ContaBancaria;
-import aulas.aula18_heranca.conta.ContaEspecial;
+import modulo4_heranca_polimorfismo.heranca.conta.ContaBancaria;
+import modulo4_heranca_polimorfismo.heranca.conta.ContaEspecial;
 
 public class AppHeranca {
     public static void main(String[] args) {
