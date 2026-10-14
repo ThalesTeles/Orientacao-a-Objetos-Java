@@ -111,10 +111,9 @@
 * Conteúdo: Prática guiada de `static` com `src/modulo4_heranca_polimorfismo/estatico/` (contador de contas compartilhado, constante `static final`, por que métodos `static` não usam `this`). Exercício de fechamento do polimorfismo: corrigir o saque de `ContaEspecial`, que hoje apenas simula o débito — introduzir um `setSaldo` `protected` na classe mãe e discutir por que ele não deve ser `public`. Nos 20 minutos finais, apresentação dos 3 modelos de projeto prático (CLI com persistência em TXT).
 * Extra-classe: escolher o modelo de projeto e listar as entidades (substantivos) e ações (verbos) do sistema.
 
-## TC44E - Aula 22 - Contratos e Abstração: Classes Abstratas
+## TC44E - Aula 22 - Java POO: Fechamento do static
 * Data: 14/10/2026
-* Conteúdo: Por que `new ContaBancaria(...)` não deveria ser permitido se toda conta é corrente, poupança ou especial. Tornar `ContaBancaria` `abstract`, criar `ContaPoupanca` e um método abstrato (ex.: `calcularTarifaMensal()`), forçando cada filha a implementá-lo. Diagrama de classes no quadro (notação de classe/método abstrato em itálico).
-* Extra-classe: identificar no projeto escolhido qual classe deveria ser abstrata.
+* Conteúdo: Exercícios de `static` em `src/modulo4_heranca_polimorfismo/estatico/`: previsão da saída do `AppStatic`, contador compartilhado `proximoNumero` e método `static` `getTotalContasCriadas()`. Chamada de métodos `static` pelo nome da classe (avisos do VS Code), bloco de inicialização `static` executado uma única vez no carregamento da classe, valores padrão de atributos `static` (`StaticClass`), ausência de `this` em contexto `static` e por que o `main` é `static`. Classes abstratas adiadas para a próxima aula.
 
 ## TC44E - Aula 23 - Contratos e Abstração: Interfaces
 * Data: 21/10/2026
