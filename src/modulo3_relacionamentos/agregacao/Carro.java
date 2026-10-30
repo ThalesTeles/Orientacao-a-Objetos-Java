@@ -4,7 +4,7 @@ public class Carro {
 
     private String modelo;
     private int velocidadeAtual;
-    
+
     // Relação de Agregação/Composição: O carro "TEM UM" motor
     private Motor motor;
 

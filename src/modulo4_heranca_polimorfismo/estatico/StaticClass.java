@@ -5,5 +5,5 @@ public class StaticClass {
   static String padraoString;
   static boolean padraoBool;
 
-  
+
 }

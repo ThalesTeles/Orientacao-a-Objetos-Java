@@ -21,7 +21,6 @@ public class ContaBancaria {
         proximoNumero = 1000;
         totalContasCriadas = 0;
         taxaJurosAnual = 2.5F;
-
     }
 
     // Atributos de instância
